@@ -1,0 +1,45 @@
+.inner-heading {
+  height: 50px;
+  overflow: hidden;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#role {
+  display: block;
+  height: 150px; /* 3 lines × 50px each */
+  position: relative;
+  animation: slide 6s ease infinite;
+}
+
+.text-wrapper > div {
+  height: 50px;
+  line-height: 50px;
+}
+
+
+@keyframes slide {
+    0%,
+    100%{
+        top: 0;
+    }
+    20%{
+        top: 0;
+    }
+    25%{
+        top:-50px
+    }
+  45%{
+    top: -50px;
+  }
+  50%{
+    top: -100px;
+  }
+  75%{
+    top: -150px
+  }
+  95%{
+    top: -150px;
+  }
+}
+
