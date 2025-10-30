@@ -1,0 +1,80 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Users, Megaphone, Video, BookOpen, BarChart2 } from "lucide-react";
+
+const services = [
+  {
+    icon: <Users className="w-6 h-6 text-white" />,
+    title: "Influencer Marketing",
+    desc: "Partnering creators and brands to leverage authentic influence across platforms.",
+    gradient: "from-[#ff007f] to-[#ff8bf5]",
+  },
+  {
+    icon: <Megaphone className="w-6 h-6 text-white" />,
+    title: "Brand Campaign Strategy",
+    desc: "Crafting end-to-end brand campaigns that drive visibility, engagement & growth.",
+    gradient: "from-[#ff8bf5] to-[#00f5ff]",
+  },
+  {
+    icon: <Video className="w-6 h-6 text-white" />,
+    title: "Content Production & Distribution",
+    desc: "High-quality content creation and distribution across social, video & emerging channels.",
+    gradient: "from-[#00f5ff] to-[#ff007f]",
+  },
+  {
+    icon: <BookOpen className="w-6 h-6 text-white" />,
+    title: "EdTech Creator & Community Growth",
+    desc: "Building creator-led edtech ventures and community-first growth strategies.",
+    gradient: "from-[#ff007f] to-[#ff8bf5]",
+  },
+  {
+    icon: <BarChart2 className="w-6 h-6 text-white" />,
+    title: "Analytics & Performance Optimisation",
+    desc: "Data-driven insights to optimise campaigns, scale results and maximise ROI.",
+    gradient: "from-[#ff8bf5] to-[#00f5ff]",
+  },
+];
+
+const OfferService = () => {
+  return (
+    <section className="w-full py-14 bg-[#0a0a0a] text-white">
+      <div className="max-w-6xl mx-auto px-6 text-center mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl font-extrabold"
+        >
+          Our Services
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg"
+        >
+          We deliver end-to-end solutions for creators, brands and ventures from strategy to launch to scale.
+        </motion.p>
+      </div>
+      <div className="max-w-6xl mx-auto px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((svc, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 + idx * 0.15, duration: 0.6 }}
+            className="bg-[#111]/70 border border-white/10 rounded-2xl p-8 backdrop-blur-xl hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
+          >
+            <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-6 bg-gradient-to-br ${svc.gradient} shadow-lg`}>
+              {svc.icon}
+            </div>
+            <h3 className="text-xl font-semibold mb-3">{svc.title}</h3>
+            <p className="text-gray-400 leading-relaxed">{svc.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default OfferService;

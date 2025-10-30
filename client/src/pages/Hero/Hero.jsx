@@ -70,6 +70,11 @@ const Hero = () => {
                     <div>Strategies</div>
                     <div>Campaigns</div>
                     <div>Influence</div>
+                    <div>Distribution</div>
+                    <div>Trust</div>
+                    <div>Brand</div>
+                    <div>Growth</div>
+                    <div>Content</div>
                   </div>
                 </span>
               </div>

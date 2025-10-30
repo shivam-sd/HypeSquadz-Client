@@ -7,9 +7,9 @@
 
 #role {
   display: block;
-  height: 150px; /* 3 lines × 50px each */
+  height: 150px; 
   position: relative;
-  animation: slide 6s ease infinite;
+  animation: slide 8s ease infinite;
 }
 
 .text-wrapper > div {

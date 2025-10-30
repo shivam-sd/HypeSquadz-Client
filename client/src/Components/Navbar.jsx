@@ -7,7 +7,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { link: "Home", path: "/" },
+    { link: "Work", path: "/work" },
     { link: "About", path: "/about" },
     { link: "Services", path: "/services" },
     { link: "Gallery", path: "/gallery" },
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="text-2xl font-extrabold tracking-tight text-white">
-          <span className="text-[#ff007f]">Hype</span>Squadz
+          <Link to={'/'}><span className="text-[#ff007f]">Hype</span>Squadz</Link>
         </div>
 
         {/* Desktop Nav */}
