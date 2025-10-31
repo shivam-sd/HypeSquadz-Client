@@ -7,9 +7,9 @@
 
 #role {
   display: block;
-  height: 150px; 
+  height: 400px; 
   position: relative;
-  animation: slide 8s ease infinite;
+  animation: slide 16s ease-in-out infinite;
 }
 
 .text-wrapper > div {
@@ -19,27 +19,35 @@
 
 
 @keyframes slide {
-    0%,
-    100%{
-        top: 0;
-    }
-    20%{
-        top: 0;
-    }
-    25%{
-        top:-50px
-    }
-  45%{
+  0%,
+  10% {
+    top: 0;
+  }
+  15%,
+  25% {
     top: -50px;
   }
-  50%{
+  30%,
+  40% {
     top: -100px;
   }
-  75%{
-    top: -150px
-  }
-  95%{
+  45%,
+  55% {
     top: -150px;
   }
+  60%,
+  70% {
+    top: -200px;
+  }
+  75%,
+  85% {
+    top: -250px;
+  }
+  90%,
+  95% {
+    top: -300px;
+  }
+  100% {
+    top: -350px;
+  }
 }
-

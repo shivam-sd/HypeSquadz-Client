@@ -11,7 +11,7 @@ const Navbar = () => {
     { link: "About", path: "/about" },
     { link: "Services", path: "/services" },
     { link: "Gallery", path: "/gallery" },
-    { link: "Contact", path: "contact" },
+    // { link: "Contact", path: "contact" },
   ];
 
   return (
@@ -30,14 +30,19 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
+            <>
             <Link
               key={link.path}
               to={link.path}
               className="text-gray-300 hover:text-white transition text-sm font-medium uppercase hover:underline duration-300"
-            >
+              >
               {link.link}
+              
             </Link>
+              </>
           ))}
+
+          <Link to={'/contact'} className="text-lg text-white bg-orange-500 cursor-pointer p-1 rounded-lg flex items-center justify-center font-bold hover:scale-105 duration-300">Contact</Link>
 
           {/* <button className="ml-4 bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
             Join Us
@@ -71,6 +76,8 @@ const Navbar = () => {
               {link.link}
             </Link>
           ))}
+
+                  <Link to={'/contact'} className="text-lg text-white bg-orange-500 cursor-pointer p-1 rounded-lg flex items-center justify-center font-bold hover:scale-105 duration-300">Contact</Link>
 
           {/* <button className="w-full bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
             Join Us
