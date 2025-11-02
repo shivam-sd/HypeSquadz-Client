@@ -1,71 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { toast } from "react-toastify";
+import axios from "axios";
 
-const works = [
-  {
-    id: 1,
-    title: "Brand Buzz Campaign",
-    summary:
-      "A viral influencer campaign for a leading lifestyle brand achieving 2M+ organic impressions.",
-    heroImage:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
-    tags: ["Instagram", "Lifestyle"],
-    objective: "Boost social presence with micro-influencers.",
-    outcome: "Increased brand visibility by 250% within 3 weeks.",
-    deliverables: ["Influencer Outreach", "Content Strategy", "Video Shoots"],
-  },
-  {
-    id: 2,
-    title: "Creator Collab for EdTech",
-    summary:
-      "A long-term creator partnership program designed for an EdTech startup to drive course signups.",
-    heroImage:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    tags: ["YouTube", "Education"],
-    objective: "Build consistent education content with creators.",
-    outcome: "Improved lead conversions by 40% and user retention.",
-    deliverables: ["Creator Management", "Video Campaign", "Analytics"],
-  },
-  {
-    id: 3,
-    title: "Fashion Week Social Domination",
-    summary:
-      "Handled social media coverage for a top fashion event with global influencer participation.",
-    heroImage:
-      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    tags: ["Fashion", "Event"],
-    objective: "Create buzz and reach using fashion influencers.",
-    outcome: "5M+ reach and 300K+ engagement in 4 days.",
-    deliverables: ["Event Coverage", "Reels Production", "PR Amplification"],
-  },
-  {
-    id: 2,
-    title: "Creator Collab for EdTech",
-    summary:
-      "A long-term creator partnership program designed for an EdTech startup to drive course signups.",
-    heroImage:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    tags: ["YouTube", "Education"],
-    objective: "Build consistent education content with creators.",
-    outcome: "Improved lead conversions by 40% and user retention.",
-    deliverables: ["Creator Management", "Video Campaign", "Analytics"],
-  },
-  {
-    id: 3,
-    title: "Fashion Week Social Domination",
-    summary:
-      "Handled social media coverage for a top fashion event with global influencer participation.",
-    heroImage:
-      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    tags: ["Fashion", "Event"],
-    objective: "Create buzz and reach using fashion influencers.",
-    outcome: "5M+ reach and 300K+ engagement in 4 days.",
-    deliverables: ["Event Coverage", "Reels Production", "PR Amplification"],
-  },
-];
+
 
 const Work = () => {
   const [selected, setSelected] = useState(null);
+  const [Allwork, setWork] = useState([]);
+
+useEffect(() => {
+  const fetchAllWork = async (req,res) => {
+    try{
+      const res = await axios.get(`${import.meta.env.VITE_BASE_URL}work/fetch`);
+
+      const data = res.data.AllWorks;
+      console.log(data);
+
+setWork(data);
+
+    }catch(err){
+      console.log("Error in Fething All Work");
+      toast.error(err.message || "Internal Server error");
+    }
+  }
+
+  fetchAllWork();
+
+},[])
+
 
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white py-20 px-6">
@@ -89,7 +52,7 @@ const Work = () => {
         layout
         className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {works.map((work) => (
+        {Allwork.map((work) => (
           <motion.div
             key={work.id}
             whileHover={{ y: -8 }}
@@ -99,7 +62,7 @@ const Work = () => {
             {/* Image */}
             <div className="relative h-52 w-full overflow-hidden">
               <img
-                src={work.heroImage}
+                src={work.image}
                 alt={work.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -217,12 +180,12 @@ const Work = () => {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <button
+                    {/* <button
                       className="bg-gradient-to-r from-[#ff007f] to-[#00f5ff] px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform cursor-pointer"
                       onClick={() => alert('View Case Study Coming Soon')}
                     >
                       View Case Study
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

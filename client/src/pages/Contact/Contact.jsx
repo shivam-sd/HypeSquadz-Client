@@ -1,8 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaUserAlt, FaRegBuilding, FaPaperPlane } from "react-icons/fa";
+import { toast } from "react-toastify";
+import {HashLoader} from "react-spinners";
+
 
 const Contact = () => {
+
+  const [contact, setContact] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    setLoading(true);
+    formData.append("access_key", `${import.meta.env.VITE_CONTACTACCESSKEY}`);
+
+    try{
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method:"POST",
+        body:formData,
+      });
+
+      const data = await res.json();
+
+      if(data.success){
+        toast.success("Mail Sent Successfully!", {
+          position:"top-center"
+        });
+        setLoading(false);
+        // console.log("Mail Sent Successfully");
+      }else{
+        toast.error(data.error || "Somting Went Wrong!", {
+          position:"top-right"
+        });
+        console.log(data.error || "Something Went Wrong");
+      }
+
+    }catch(error){
+      toast.error("Network Error! Please Try Again", {
+        position:"top-left"
+      });
+      // console.log("Error In Contact From");
+    }
+
+
+  }
+
   return (
     <section className="relative w-full py-24 px-6 bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white overflow-hidden">
       {/* Background gradient orbs */}
@@ -33,7 +77,7 @@ const Contact = () => {
         viewport={{ once: true }}
         className="relative z-10 max-w-3xl mx-auto bg-[#111]/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 sm:p-10 shadow-[0_0_40px_-10px_rgba(255,0,127,0.3)]"
       >
-        <form className="grid gap-6">
+        <form className="grid gap-6" onSubmit={handleSubmit}>
           {/* Name */}
           <div className="flex items-center gap-3 border-b border-white/10 pb-3 focus-within:border-[#ff007f] transition-all">
             <FaUserAlt className="text-[#ff007f]" />
@@ -42,6 +86,7 @@ const Contact = () => {
               placeholder="Your Name"
               className="w-full bg-transparent focus:outline-none text-gray-200 placeholder-gray-500"
               required
+              name="FullName"
             />
           </div>
 
@@ -53,6 +98,7 @@ const Contact = () => {
               placeholder="Your Email"
               className="w-full bg-transparent focus:outline-none text-gray-200 placeholder-gray-500"
               required
+              name="Email"
             />
           </div>
 
@@ -63,6 +109,7 @@ const Contact = () => {
               type="text"
               placeholder="Brand / Company"
               className="w-full bg-transparent focus:outline-none text-gray-200 placeholder-gray-500"
+              name="Barnd/Company"
             />
           </div>
 
@@ -73,6 +120,7 @@ const Contact = () => {
               placeholder="Tell us about your project..."
               className="w-full bg-transparent focus:outline-none text-gray-200 placeholder-gray-500 resize-none"
               required
+              name="Message"
             ></textarea>
           </div>
 
@@ -86,6 +134,12 @@ const Contact = () => {
           >
             <FaPaperPlane className="text-lg"/>
             Send Message
+            {
+              loading ? 
+              <HashLoader size={30} />
+              :
+              ""
+            }
           </motion.button>
         </form>
       </motion.div>

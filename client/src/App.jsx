@@ -9,6 +9,12 @@ import ErrorPage from './Components/ErrorPage';
 import Work from './pages/Work/Work';
 import Home from "./pages/Home";
 import Master from './Components/Master';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
+import AddWorkForm from './pages/AdminDashboard/AddWorkForm';
+import EditWorkForm from './pages/AdminDashboard/EditWorkForm';
+import AddImageForm from './pages/AdminDashboard/AddImageFrom';
+import AdminLogin from './pages/AdminDashboard/AdminLogin';
+import ProtectedRoute from './helper/ProtectedRoute';
 
 
 const App = () => {
@@ -23,6 +29,11 @@ const App = () => {
         <Route path='/work' element={<Work />} />
         <Route path='/contact' element={<Contact />} />
         </Route>
+        <Route path='/admin-login' element={<AdminLogin />} />
+        <Route path='/admindashboard' element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+        <Route path='/admin-work-create' element={<ProtectedRoute><AddWorkForm /></ProtectedRoute>} />
+        <Route path='/admin-work-update/:id' element={<ProtectedRoute><EditWorkForm /></ProtectedRoute>} />
+        <Route path='/admin-image-upload' element={<ProtectedRoute><AddImageForm /></ProtectedRoute>} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </div>
