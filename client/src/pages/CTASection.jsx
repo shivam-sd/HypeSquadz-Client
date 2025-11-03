@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ import Link for navigation
 
 const CTASection = () => {
   return (
@@ -18,23 +19,34 @@ const CTASection = () => {
       >
         {/* Heading */}
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-          Got a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff]">Brand</span> to Grow?
+          Got a{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff]">
+            Brand
+          </span>{" "}
+          to Grow?
         </h2>
 
         {/* Subtext */}
-        <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto mb-10">
-          Let’s collaborate to make your next campaign <span className="text-[#ff007f] font-medium">go viral</span> with strategy, content, and creativity.
+        <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-10">
+          Let’s collaborate to make your next campaign{" "}
+          <span className="text-[#ff007f] font-medium">go viral</span> with strategy,
+          content, and creativity.
         </p>
 
-        {/* Button with gradient hover and glow */}
-        <motion.button
-          whileHover={{ scale: 1.08, boxShadow: "0px 0px 25px rgba(255,0,127,0.5)" }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.3 }}
-          className="bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300"
-        >
-          Book a Call
-        </motion.button>
+        {/* Button with link to Contact page */}
+        <Link to="/contact">
+          <motion.button
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 0px 25px rgba(255,0,127,0.5)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+            className="bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer"
+          >
+            Book a Call
+          </motion.button>
+        </Link>
       </motion.div>
 
       {/* Subtle bottom border gradient */}

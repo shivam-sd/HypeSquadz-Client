@@ -58,8 +58,9 @@ const NumbersSection = () => {
         transition={{ duration: 0.8 }}
         className="max-w-4xl mx-auto mb-12"
       >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Numbers That Speak</h2>
-        <p className="text-gray-400 text-lg sm:text-xl">We don’t just promise results <br /> we deliver them at scale.</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff]">
+          Numbers</span>&nbsp;That Speak</h2>
+        <p className="text-gray-400 text-sm sm:text-xl">We don’t just promise results we deliver them at scale.</p>
       </motion.div>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">

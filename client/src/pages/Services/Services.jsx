@@ -68,7 +68,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + index * 0.2, duration: 0.6 }}
-              className="bg-[#111]/70 border border-yellow-200/40 rounded-2xl p-8 backdrop-blur-xl hover:-translate-y-2 hover:border-[#ff007f]/40 transition-all duration-300 cursor-pointer"
+              className="bg-[#111]/70 border border-yellow-200/40 rounded-2xl p-8 backdrop-blur-xl hover:-translate-y-2 hover:border-[#ff007f]/40 transition-all duration-300 cursor-pointer text-left"
             >
               <div
                 className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 shadow-lg`}

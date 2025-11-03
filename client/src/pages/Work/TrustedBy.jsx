@@ -43,7 +43,7 @@ const TrustedBy = () => {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
             whileHover={{ scale: 1.05, y: -4 }}
-            className="group bg-[#111]/60 border border-white/10 hover:border-[#ff007f]/40 rounded-2xl p-8 backdrop-blur-xl 
+            className="group bg-[#111]/60 border border-white/70 hover:border-[#ff007f]/40 rounded-2xl p-8 backdrop-blur-xl 
                        transition-all duration-300 cursor-pointer hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.4)]"
           >
             <h3 className="text-lg sm:text-xl font-semibold text-gray-300 group-hover:text-white transition">

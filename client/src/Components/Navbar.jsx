@@ -7,6 +7,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
+    { link: "Home", path: "/" },
     { link: "Work", path: "/work" },
     { link: "About", path: "/about" },
     { link: "Services", path: "/services" },
@@ -42,7 +43,15 @@ const Navbar = () => {
               </>
           ))}
 
-          <Link to={'/contact'} className="text-lg text-white bg-orange-500 cursor-pointer p-1 rounded-lg flex items-center justify-center font-bold hover:scale-105 duration-300">Contact</Link>
+          <Link to={'/contact'}><motion.button whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 0px 25px rgba(255,0,127,0.5)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+            className="bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white font-semibold px-6 py-1 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer">
+            Contect
+            </motion.button></Link>
 
           {/* <button className="ml-4 bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
             Join Us

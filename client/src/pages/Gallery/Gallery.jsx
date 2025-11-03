@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { FaTrash } from "react-icons/fa";
+// import { FaTrash } from "react-icons/fa";
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
@@ -22,18 +22,18 @@ const Gallery = () => {
   }, []);
 
   // Delete image handler
-  const handleDelete = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this image?")) return;
+  // const handleDelete = async (id) => {
+  //   if (!window.confirm("Are you sure you want to delete this image?")) return;
 
-    try {
-      await axios.delete(`${import.meta.env.VITE_BASE_URL}gallery/delete/${id}`);
-      toast.success("Image deleted successfully!");
-      setImages((prev) => prev.filter((img) => img._id !== id));
-    } catch (err) {
-      console.error(err);
-      toast.error("Error deleting image");
-    }
-  };
+  //   try {
+  //     await axios.delete(`${import.meta.env.VITE_BASE_URL}gallery/delete/${id}`);
+  //     toast.success("Image deleted successfully!");
+  //     setImages((prev) => prev.filter((img) => img._id !== id));
+  //   } catch (err) {
+  //     console.error(err);
+  //     toast.error("Error deleting image");
+  //   }
+  // };
 
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#1a1a1a] text-white py-16 px-6 overflow-hidden">
@@ -72,13 +72,13 @@ const Gallery = () => {
                   alt={img.title}
                   className="w-full h-64 object-cover rounded-t-2xl"
                 />
-                {/* Delete Button (admin only) */}
+                {/* Delete Button (admin only)
                 <button
                   onClick={() => handleDelete(img._id)}
                   className="absolute top-3 right-3 bg-red-500/70 hover:bg-red-500 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
                 >
                   <FaTrash size={16} />
-                </button>
+                </button> */}
               </div>
 
               {/* Text below image */}

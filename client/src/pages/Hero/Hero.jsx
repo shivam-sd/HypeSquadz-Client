@@ -26,7 +26,7 @@ const Hero = () => {
             We Build Hype
             <br />
             <span className="text-[#ff007f]"> That Converts</span>
-            <span className="text-3xl sm:text-4xl">.</span>
+            {/* <span className="text-3xl sm:text-4xl">.</span> */}
             <br />
             Boost <span className="text-[#00f5ff]">Engagement</span>
           </motion.h1>
