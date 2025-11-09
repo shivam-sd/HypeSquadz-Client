@@ -4,10 +4,10 @@ import { Users, Megaphone, Video, BookOpen, BarChart2 } from "lucide-react";
 
 const services = [
   {
-    icon: <Users className="w-6 h-6 text-white" />,
-    title: "Influencer Marketing",
-    desc: "Partnering creators and brands to leverage authentic influence across platforms.",
-    gradient: "from-[#ff007f] to-[#ff8bf5]",
+    icon: <Video className="w-6 h-6 text-white" />,
+    title: "Content Production & Distribution",
+    desc: "High-quality content creation and distribution across social, video & emerging channels.",
+    gradient: "from-[#00f5ff] to-[#ff007f]",
   },
   {
     icon: <Megaphone className="w-6 h-6 text-white" />,
@@ -16,23 +16,19 @@ const services = [
     gradient: "from-[#ff8bf5] to-[#00f5ff]",
   },
   {
-    icon: <Video className="w-6 h-6 text-white" />,
-    title: "Content Production & Distribution",
-    desc: "High-quality content creation and distribution across social, video & emerging channels.",
-    gradient: "from-[#00f5ff] to-[#ff007f]",
-  },
-  {
-    icon: <BookOpen className="w-6 h-6 text-white" />,
-    title: "EdTech Creator & Community Growth",
-    desc: "Building creator-led edtech ventures and community-first growth strategies.",
+    icon: <Users className="w-6 h-6 text-white" />,
+    title: "Influencer Marketing",
+    desc: "Partnering creators and brands to leverage authentic influence across platforms.",
     gradient: "from-[#ff007f] to-[#ff8bf5]",
   },
-  {
-    icon: <BarChart2 className="w-6 h-6 text-white" />,
-    title: "Analytics & Performance Optimisation",
-    desc: "Data-driven insights to optimise campaigns, scale results and maximise ROI.",
-    gradient: "from-[#ff8bf5] to-[#00f5ff]",
-  },
+{
+  icon: <BookOpen className="w-6 h-6 text-white" />,
+  title: "Theme Pages (Fan Pages)",
+  desc: "India’s largest hub of 1000+ theme pages across niches — Education, Finance, Motivation, and more, with a 100M+ following.",
+  gradient: "from-[#ff007f] to-[#ff8bf5]",
+}
+
+
 ];
 
 const OfferService = () => {
@@ -68,7 +64,7 @@ const OfferService = () => {
             <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-6 bg-gradient-to-br ${svc.gradient} shadow-lg`}>
               {svc.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-3">{svc.title}</h3>
+            <h3 className="text-xl font-semibold mb-3 ">{svc.title}</h3>
             <p className="text-gray-400 leading-relaxed">{svc.desc}</p>
           </motion.div>
         ))}

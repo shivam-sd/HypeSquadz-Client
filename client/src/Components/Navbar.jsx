@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="text-2xl font-extrabold tracking-tight text-white">
-          <Link to={'/'}><span className="text-[#ff007f]">Hype</span>Squadz</Link>
+          <Link to={'/'}><span className="text-[#ff007f]">HypeSquadz</span></Link>
         </div>
 
         {/* Desktop Nav */}

@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Zap, Users2, Rocket } from "lucide-react";
 import OfferService from './OfferService';
+import OurPillars from './OurPillers';
 
 
 const Services = () => {
@@ -82,6 +83,7 @@ const Services = () => {
         </div>
       </div>
 
+<OurPillars />
 <OfferService />
 
     </section>

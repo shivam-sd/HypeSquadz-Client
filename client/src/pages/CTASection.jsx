@@ -28,9 +28,8 @@ const CTASection = () => {
 
         {/* Subtext */}
         <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-10">
-          Let’s collaborate to make your next campaign{" "}
-          <span className="text-[#ff007f] font-medium">go viral</span> with strategy,
-          content, and creativity.
+          Let’s Collaborate to Make Our Brand (Your Brand is Our Brand) {" "}
+          <span className="text-[#ff007f] font-medium">go viral</span> with the Next Big Thing.
         </p>
 
         {/* Button with link to Contact page */}
@@ -44,7 +43,7 @@ const CTASection = () => {
             transition={{ duration: 0.3 }}
             className="bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer"
           >
-            Book a Call
+            Contact Us
           </motion.button>
         </Link>
       </motion.div>

@@ -25,7 +25,7 @@ const Footer = () => {
         className="relative z-10 flex flex-col items-center justify-center text-center px-6"
       >
         {/* Logo / Name */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff] mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-pink-600 mb-4">
           HypeSquadz
         </h2>
 

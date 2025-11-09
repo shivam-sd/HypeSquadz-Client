@@ -23,12 +23,11 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight "
           >
-            We Build Hype
+           The Squad Behind
             <br />
-            <span className="text-[#ff007f]"> That Converts</span>
+            <span className="text-pink-600"> Breakthrough  </span>
             {/* <span className="text-3xl sm:text-4xl">.</span> */}
-            <br />
-            Boost <span className="text-[#00f5ff]">Engagement</span>
+             <span className="text-pink-600"> Brand</span>
           </motion.h1>
 
           {/* Subtext */}
@@ -39,14 +38,13 @@ const Hero = () => {
             className="text-gray-300 mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-relaxed "
           >
             <span className=" md:inline text-white font-semibold">
-              HypeSquadz is your creative powerhouse
+              You create the Vision. 
             </span>{" "}
-            - connecting brands and influencers to make marketing feel authentic
-            and exciting.
+            - We build the Growth Engine for you.
+   
             <br className=" sm:block" /><br className="lg:hidden flex" />
             <span className="text-base sm:text-lg">
-              The growth engine behind 500M+ impressions for India's top edtech
-              and creator brands.
+           End-to-End  Content, Branding, and PR System for Founders, Creators, and Educational Brands
             </span>
           </motion.p>
 

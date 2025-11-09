@@ -38,9 +38,9 @@ const About = () => {
       <div className="py-20 px-6 max-w-6xl mx-auto text-center">
         <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1,y:0 }} transition={{ duration:0.8 }}>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-            <div><h3 className="text-3xl font-bold text-[#ff007f]">500M+</h3><p className="text-gray-400">Impressions</p></div>
+            <div><h3 className="text-3xl font-bold text-[#ff007f]">1 Billion+ Views</h3><p className="text-gray-400">Impressions</p></div>
             <div><h3 className="text-3xl font-bold text-[#00f5ff]">100+</h3><p className="text-gray-400">Brands Collaborated</p></div>
-            <div><h3 className="text-3xl font-bold text-[#ff007f]">10M+</h3><p className="text-gray-400">Followers Managed</p></div>
+            <div><h3 className="text-3xl font-bold text-[#ff007f]">100M+</h3><p className="text-gray-400">Followers Managed</p></div>
             <div><h3 className="text-3xl font-bold text-[#00f5ff]">50+</h3><p className="text-gray-400">Campaigns Delivered</p></div>
           </div>
         </motion.div>

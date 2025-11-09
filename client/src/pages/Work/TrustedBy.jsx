@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const brands = [
-  { id: 1, name: "BioMentors" },
-  { id: 2, name: "CareerWill" },
-  { id: 3, name: "Super50" },
-  { id: 4, name: "EduTech Pro" },
-  { id: 5, name: "LearnHub" },
-  { id: 6, name: "SkillBoost" },
+  { id: 1, name: "Physics Wallah" },
+  { id: 2, name: "Careerwill" },
+  { id: 3, name: "Nishant Jindal" },
+  { id: 4, name: "Scaler School of Technology" },
+  { id: 5, name: "Biomentors" },
+  { id: 6, name: "Mirai School of Technology" },
 ];
 
 const TrustedBy = () => {
@@ -29,7 +29,7 @@ const TrustedBy = () => {
           Trusted By The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff]">Best</span>
         </h2>
         <p className="text-gray-400 text-lg sm:text-xl">
-          Partnered with India’s fastest-growing education and creator brands.
+          Partnered with India’s Fastest-Growing Education and Creator Brands.
         </p>
       </motion.div>
 

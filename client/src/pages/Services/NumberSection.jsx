@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const statsData = [
-  { id: 1, number: "500M+", label: "Impressions" },
+  { id: 1, number: "1 B+", label: "Impressions" },
   { id: 2, number: "100+", label: "Brands Served" },
-  { id: 3, number: "10M+", label: "Followers Managed" },
+  { id: 3, number: "100M+", label: "Followers Managed" },
   { id: 4, number: "50+", label: "Creator Campaigns" },
 ];
 
