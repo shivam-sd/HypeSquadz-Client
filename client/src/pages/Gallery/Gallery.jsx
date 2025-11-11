@@ -2,38 +2,40 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-toastify";
-// import { FaTrash } from "react-icons/fa";
+import Loader from "../../Components/Loader"; // ✅ Import your loader
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Fetch gallery images from backend
   useEffect(() => {
     const fetchImages = async () => {
+      setLoading(true);
       try {
-        const res = await axios.get(`${import.meta.env.VITE_BASE_URL}gallery/images`);
-        setImages(res.data.allImages || []);
+        const res = await axios.get(
+          `${import.meta.env.VITE_BASE_URL}gallery/images`
+        );
+        setImages(res.data?.allImages || []);
       } catch (err) {
-        console.error(err);
+        console.error("Error fetching gallery images:", err);
         toast.error("Failed to load gallery images!");
+      } finally {
+        setLoading(false);
       }
     };
+
     fetchImages();
   }, []);
 
-  // Delete image handler
-  // const handleDelete = async (id) => {
-  //   if (!window.confirm("Are you sure you want to delete this image?")) return;
-
-  //   try {
-  //     await axios.delete(`${import.meta.env.VITE_BASE_URL}gallery/delete/${id}`);
-  //     toast.success("Image deleted successfully!");
-  //     setImages((prev) => prev.filter((img) => img._id !== id));
-  //   } catch (err) {
-  //     console.error(err);
-  //     toast.error("Error deleting image");
-  //   }
-  // };
+  // ✅ Loader while fetching
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-black text-white">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#1a1a1a] text-white py-16 px-6 overflow-hidden">
@@ -47,14 +49,16 @@ const Gallery = () => {
           Our <span className="text-[#00f5ff]">Gallery</span>
         </h2>
         <p className="text-gray-400 mt-3 text-lg max-w-2xl mx-auto">
-          A glimpse of the incredible moments, campaigns, and collaborations powered by{" "}
+          A glimpse of incredible moments, campaigns, and collaborations powered by{" "}
           <span className="text-[#ff007f] font-semibold">HypeSquadz</span>.
         </p>
       </motion.div>
 
       {/* Gallery Grid */}
       {images.length === 0 ? (
-        <p className="text-center text-gray-500 mt-20">No images available yet.</p>
+        <p className="text-center text-gray-500 mt-20">
+          No images available yet.
+        </p>
       ) : (
         <motion.div
           layout
@@ -72,18 +76,13 @@ const Gallery = () => {
                   alt={img.title}
                   className="w-full h-64 object-cover rounded-t-2xl"
                 />
-                {/* Delete Button (admin only)
-                <button
-                  onClick={() => handleDelete(img._id)}
-                  className="absolute top-3 right-3 bg-red-500/70 hover:bg-red-500 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
-                >
-                  <FaTrash size={16} />
-                </button> */}
               </div>
 
               {/* Text below image */}
               <div className="p-4 text-center bg-[#1a1a1a] rounded-b-2xl">
-                <h3 className="text-lg font-semibold text-white">{img.title}</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {img.title}
+                </h3>
                 <p className="text-sm text-gray-400 mt-1">#HypeSquadz</p>
               </div>
             </motion.div>
@@ -91,7 +90,7 @@ const Gallery = () => {
         </motion.div>
       )}
 
-      {/* Floating gradients for visual depth */}
+      {/* Floating Gradients */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-[#ff007f]/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-60 h-60 bg-[#00f5ff]/30 rounded-full blur-3xl animate-pulse"></div>
     </section>
@@ -99,4 +98,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
- 

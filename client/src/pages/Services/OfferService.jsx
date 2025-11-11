@@ -6,25 +6,25 @@ const services = [
   {
     icon: <Video className="w-6 h-6 text-white" />,
     title: "Content Production & Distribution",
-    desc: "High-quality content creation and distribution across social, video & emerging channels.",
+    desc: "High-Quality Content Creation And Distribution Across Social, Video & Emerging Channels.",
     gradient: "from-[#00f5ff] to-[#ff007f]",
   },
   {
     icon: <Megaphone className="w-6 h-6 text-white" />,
     title: "Brand Campaign Strategy",
-    desc: "Crafting end-to-end brand campaigns that drive visibility, engagement & growth.",
+    desc: "Crafting End-To-End Brand Campaigns That Drive Visibility, Engagement & Growth.",
     gradient: "from-[#ff8bf5] to-[#00f5ff]",
   },
   {
     icon: <Users className="w-6 h-6 text-white" />,
     title: "Influencer Marketing",
-    desc: "Partnering creators and brands to leverage authentic influence across platforms.",
+    desc: "Partnering Creators And Brands To Leverage Authentic Influence Across Platforms.",
     gradient: "from-[#ff007f] to-[#ff8bf5]",
   },
 {
   icon: <BookOpen className="w-6 h-6 text-white" />,
   title: "Theme Pages (Fan Pages)",
-  desc: "India’s largest hub of 1000+ theme pages across niches — Education, Finance, Motivation, and more, with a 100M+ following.",
+  desc: "India’s Largest Hub Of 1000+ Theme Pages Across Niches — Education, Finance, Motivation, And More, With A 100M+ Following.",
   gradient: "from-[#ff007f] to-[#ff8bf5]",
 }
 
@@ -61,7 +61,7 @@ const OfferService = () => {
             transition={{ delay: 0.3 + idx * 0.15, duration: 0.6 }}
             className="bg-[#111]/70 border border-white/10 rounded-2xl p-8 backdrop-blur-xl hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
           >
-            <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-6 bg-gradient-to-br ${svc.gradient} shadow-lg`}>
+            <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-6 bg-[#ff007f] shadow-lg`}>
               {svc.icon}
             </div>
             <h3 className="text-xl font-semibold mb-3 ">{svc.title}</h3>

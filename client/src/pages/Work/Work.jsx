@@ -2,33 +2,40 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "react-toastify";
 import axios from "axios";
-
-
+import Loader from "../../Components/Loader";
 
 const Work = () => {
   const [selected, setSelected] = useState(null);
-  const [Allwork, setWork] = useState([]);
+  const [allWork, setAllWork] = useState([]);
+  const [loader, setLoader] = useState(true);
 
-useEffect(() => {
-  const fetchAllWork = async (req,res) => {
-    try{
-      const res = await axios.get(`${import.meta.env.VITE_BASE_URL}work/fetch`);
+  useEffect(() => {
+    const fetchAllWork = async () => {
+      setLoader(true);
+      try {
+        const res = await axios.get(
+          `${import.meta.env.VITE_BASE_URL}work/fetch`
+        );
+        const data = res.data?.AllWorks || [];
+        setAllWork(data);
+      } catch (err) {
+        console.error("Error in fetching All Work:", err);
+        toast.error(err.message || "Internal Server Error");
+      } finally {
+        setLoader(false);
+      }
+    };
 
-      const data = res.data.AllWorks;
-      console.log(data);
+    fetchAllWork();
+  }, []);
 
-setWork(data);
-
-    }catch(err){
-      console.log("Error in Fething All Work");
-      toast.error(err.message || "Internal Server error");
-    }
+  if (loader) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-black text-white">
+        <Loader />
+      </div>
+    );
   }
-
-  fetchAllWork();
-
-},[])
-
 
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white py-20 px-6">
@@ -39,7 +46,7 @@ setWork(data);
         className="max-w-6xl mx-auto text-center mb-12"
       >
         <h2 className="text-4xl sm:text-5xl font-extrabold">
-          Our <span className="text-[#00f5ff]">Work</span>
+          Our <span className="text-[#ff007f]">Work</span>
         </h2>
         <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
           Discover our most successful influencer collaborations and brand
@@ -52,9 +59,9 @@ setWork(data);
         layout
         className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {Allwork.map((work) => (
+        {allWork.map((work) => (
           <motion.div
-            key={work.id}
+            key={work._id}
             whileHover={{ y: -8 }}
             className="relative bg-[#111]/70 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-300 group hover:border-[#ff007f]/40 cursor-pointer"
             onClick={() => setSelected(work)}
@@ -66,9 +73,11 @@ setWork(data);
                 alt={work.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute bottom-4 left-4 bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white text-xs px-3 py-1 rounded-full shadow-md">
-                {work.tags[0]}
-              </div>
+              {work.tags?.[0] && (
+                <div className="absolute bottom-4 left-4 bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white text-xs px-3 py-1 rounded-full shadow-md">
+                  {work.tags[0]}
+                </div>
+              )}
             </div>
 
             {/* Card Content */}
@@ -79,36 +88,42 @@ setWork(data);
               </p>
 
               {/* Outcome */}
-              <div className="mt-3">
-                <p className="text-sm text-gray-300">
-                  <span className="font-semibold text-white">Outcome:</span>{" "}
-                  {work.outcome}
-                </p>
-              </div>
+              {work.outcome && (
+                <div className="mt-3">
+                  <p className="text-sm text-gray-300">
+                    <span className="font-semibold text-white">Outcome:</span>{" "}
+                    {work.outcome}
+                  </p>
+                </div>
+              )}
 
               {/* Deliverables */}
-              <div className="mt-3">
-                <p className="text-sm text-gray-300 font-semibold">
-                  Deliverables:
-                </p>
-                <ul className="text-gray-400 text-sm list-disc list-inside mt-1 space-y-1">
-                  {work.deliverables.slice(0, 3).map((d, i) => (
-                    <li key={i}>{d}</li>
-                  ))}
-                </ul>
-              </div>
+              {work.deliverables && (
+                <div className="mt-3">
+                  <p className="text-sm text-gray-300 font-semibold">
+                    Deliverables:
+                  </p>
+                  <ul className="text-gray-400 text-sm list-disc list-inside mt-1 space-y-1">
+                    {work.deliverables.slice(0, 3).map((d, i) => (
+                      <li key={i}>{d}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Tags */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {work.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="bg-white/5 text-gray-300 text-xs px-3 py-1 rounded-full"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
+              {work.tags && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {work.tags.map((t, i) => (
+                    <span
+                      key={i}
+                      className="bg-white/5 text-gray-300 text-xs px-3 py-1 rounded-full"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Hover Overlay */}
@@ -143,7 +158,7 @@ setWork(data);
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/2 h-64 md:h-auto">
                   <img
-                    src={selected.heroImage}
+                    src={selected.heroImage || selected.image}
                     alt={selected.title}
                     className="w-full h-full object-cover"
                   />
@@ -154,38 +169,36 @@ setWork(data);
                   </h3>
                   <p className="text-gray-300 mb-4">{selected.summary}</p>
                   <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-semibold text-white">
-                        Objective:{" "}
-                      </span>
-                      <span className="text-gray-400">
-                        {selected.objective}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-semibold text-white">
-                        Outcome:{" "}
-                      </span>
-                      <span className="text-gray-400">
-                        {selected.outcome}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-semibold text-white">
-                        Deliverables:{" "}
-                      </span>
-                      <span className="text-gray-400">
-                        {selected.deliverables.join(", ")}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="mt-6">
-                    {/* <button
-                      className="bg-gradient-to-r from-[#ff007f] to-[#00f5ff] px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => alert('View Case Study Coming Soon')}
-                    >
-                      View Case Study
-                    </button> */}
+                    {selected.objective && (
+                      <div>
+                        <span className="font-semibold text-white">
+                          Objective:{" "}
+                        </span>
+                        <span className="text-gray-400">
+                          {selected.objective}
+                        </span>
+                      </div>
+                    )}
+                    {selected.outcome && (
+                      <div>
+                        <span className="font-semibold text-white">
+                          Outcome:{" "}
+                        </span>
+                        <span className="text-gray-400">
+                          {selected.outcome}
+                        </span>
+                      </div>
+                    )}
+                    {selected.deliverables && (
+                      <div>
+                        <span className="font-semibold text-white">
+                          Deliverables:{" "}
+                        </span>
+                        <span className="text-gray-400">
+                          {selected.deliverables.join(", ")}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

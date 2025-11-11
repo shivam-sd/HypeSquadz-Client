@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const brands = [
-  { id: 1, name: "Physics Wallah" },
-  { id: 2, name: "Careerwill" },
-  { id: 3, name: "Nishant Jindal" },
-  { id: 4, name: "Scaler School of Technology" },
-  { id: 5, name: "Biomentors" },
-  { id: 6, name: "Mirai School of Technology" },
+  { id: 1, name: "Physics Wallah" , logo:"https://play-lh.googleusercontent.com/x5_bJXO_-4zH95U6-GSmZPHWX7iFe1JPmfGe26kV2fVrZS5Ebi7L_VFIOopAQ3XBDg=w240-h480-rw" },
+  { id: 2, name: "Careerwill" , logo:"https://play-lh.googleusercontent.com/kEa-ftsB33wVBeS3EDFZHlDN3FMKTEJ8KgBDz39WspreIt7QD07Hy4SAbUPDWXl1Li96" },
+  { id: 3, name: "Nishant Jindal" , logo:"https://nocache-appxdb.classx.co.in/subject/2024-01-16-0.5069151552230504.jpg" },
+  { id: 4, name: "Scaler School of Technology" , logo:"https://static.theprint.in/wp-content/uploads/2023/12/ANI-20231207111532.jpg" },
+  { id: 5, name: "Biomentors" , logo:"https://play-lh.googleusercontent.com/EzxfPxlzCoKR3qcX0chSgokYeTbaR_S8sx9Rn6ybC63sFtNrZjUGNIyYxEPqRDPyopE" },
+  { id: 6, name: "Mirai School of Technology" , logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAvkx1pSmfRx2MR50QpsGnWs7yL9OTUxidZg&s" },
 ];
 
 const TrustedBy = () => {
@@ -26,7 +26,7 @@ const TrustedBy = () => {
         className="relative z-10 max-w-3xl mx-auto mb-12"
       >
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-          Trusted By The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff]">Best</span>
+          Trusted By The <span className="text-transparent bg-clip-text bg-[#ff007f]">Best</span>
         </h2>
         <p className="text-gray-400 text-lg sm:text-xl">
           Partnered with India’s Fastest-Growing Education and Creator Brands.
@@ -44,12 +44,12 @@ const TrustedBy = () => {
             transition={{ delay: i * 0.1, duration: 0.6 }}
             whileHover={{ scale: 1.05, y: -4 }}
             className="group bg-[#111]/60 border border-white/70 hover:border-[#ff007f]/40 rounded-2xl p-8 backdrop-blur-xl 
-                       transition-all duration-300 cursor-pointer hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.4)]"
+                       transition-all duration-300 cursor-pointer hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.4)] flex items-center justify-start gap-5"
           >
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-300 group-hover:text-white transition">
+            <img src={brand.logo} alt="Logo" className="w-16 rounded-2xl" />            <h3 className="text-lg sm:text-xl font-semibold text-gray-300 group-hover:text-white transition">
               {brand.name}
             </h3>
-            <div className="mt-2 h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-[#ff007f] to-[#00f5ff] transition-all duration-500" />
+            {/* <div className="mt-20 h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-[#ff007f] to-[#00f5ff] transition-all duration-500" /> */}
           </motion.div>
         ))}
       </div>

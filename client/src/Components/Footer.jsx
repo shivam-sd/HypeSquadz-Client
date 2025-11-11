@@ -30,8 +30,8 @@ const Footer = () => {
         </h2>
 
         {/* Tagline */}
-        <p className="text-gray-400 text-sm sm:text-base max-w-md mx-auto mb-8">
-          Building hype that converts - one campaign at a time.
+        <p className="text-gray-400 text-sm sm:text-base max-w-lg mx-auto mb-8">
+          Where Data meets Creativity and Hype turns into Impact.
         </p>
 
         {/* Social Links */}

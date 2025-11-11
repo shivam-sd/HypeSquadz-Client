@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import { Zap, Users2, Rocket } from "lucide-react";
+import { Workflow, Users2, Rocket } from "lucide-react";
 import OfferService from './OfferService';
 import OurPillars from './OurPillers';
 
@@ -10,21 +10,21 @@ const Services = () => {
 
   const approach = [
   {
-    icon: <Zap className="w-8 h-8 text-white" />,
+    icon: <Workflow className="w-8 h-8 text-white" />,
     title: "Data-Driven Creativity",
-    desc: "Every campaign is backed by analytics and insights that fuel creative decisions.",
+    desc: "Every Campaign Backed By Analytics And Insights That Fuel Creative Decisions.",
     gradient: "from-[#ff007f] to-[#ff8bf5]",
   },
   {
     icon: <Users2 className="w-8 h-8 text-white" />,
     title: "Creator Pods",
-    desc: "We build and manage communities of creators who amplify your brand message.",
+    desc: "We Build And Manage Communities Of Creators Who Amplify Your Brand Message.",
     gradient: "from-[#ff8bf5] to-[#00f5ff]",
   },
   {
     icon: <Rocket className="w-8 h-8 text-white" />,
     title: "Speed Over Perfection",
-    desc: "In the fast-paced world of digital, we ship fast, test faster, and optimize constantly.",
+    desc: "In The Fast-Paced World Of Digital, We Ship Fast, Test Faster, And Optimize Constantly.",
     gradient: "from-[#00f5ff] to-[#ff007f]",
   },
 ];
@@ -48,17 +48,17 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl sm:text-5xl font-extrabold mb-4"
         >
-          The Squad Behind Your <span className="text-[#00f5ff]">Hype</span>
+          The Squad Behind Your <span className="text-pink-500">Hype</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-gray-400 max-w-2xl mx-auto mb-16 text-lg"
+          className="text-gray-300 max-w-2xl mx-auto mb-16 text-lg"
         >
-          We’re not an agency. We’re a movement scaling creators, brands, and ventures 
-          through data, content, and community.
+      You create the Vision. We build the Growth Engine for you.
+End-to-End Content, Branding, and PR System for Founders, Creators, and Educational Brands
         </motion.p>
 
         {/* Cards */}
@@ -72,12 +72,12 @@ const Services = () => {
               className="bg-[#111]/70 border border-yellow-200/40 rounded-2xl p-8 backdrop-blur-xl hover:-translate-y-2 hover:border-[#ff007f]/40 transition-all duration-300 cursor-pointer text-left"
             >
               <div
-                className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 shadow-lg`}
+                className={`w-14 h-14 rounded-xl bg-[#ff007f] flex items-center justify-center mb-6 shadow-lg`}
               >
                 {item.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-gray-400 text-lg leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
