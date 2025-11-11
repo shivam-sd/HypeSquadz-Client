@@ -24,9 +24,13 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="text-2xl font-extrabold tracking-tight text-white">
-          <Link to={'/'}><span className="text-[#ff007f]">HypeSquadz</span></Link>
-        </div>
+       <div className="text-2xl font-extrabold tracking-tight text-white">
+  <Link to="/">
+    <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
+      HypeSquadz
+    </span>
+  </Link>
+</div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">

@@ -3,59 +3,71 @@ import { Brain, Users, Zap } from "lucide-react";
 
 const OurPillars = () => {
   return (
-    <section className="w-full bg-[#0a0a0a] text-white py-24 px-6">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="w-full bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white py-24 px-6 relative overflow-hidden">
+      {/* Floating Glow Elements */}
+      <div className="absolute top-10 left-10 w-60 h-60 bg-pink-500/20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-fuchsia-600/20 blur-3xl rounded-full"></div>
+
+      <div className="max-w-7xl mx-auto text-center relative z-10">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Our <span className="bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">Pillars</span>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+          Our{" "}
+          <span className="text-pink-500">
+            Pillars
+          </span>
         </h2>
 
         {/* Subtext */}
-        <p className="text-gray-400 max-w-3xl mx-auto mb-16 text-lg md:text-xl">
-          We’re not an Agency. We’re a Movement Helping Brands through{" "}
-          <span className="text-pink-400 font-semibold">Data</span>,{" "}
-          <span className="text-pink-400 font-semibold">Content</span>, and{" "}
-          <span className="text-pink-400 font-semibold">Community</span>.
+        <p className="text-gray-300 max-w-3xl mx-auto mb-16 text-lg md:text-xl">
+          We’re not an Agency. We’re a{" "}
+          <span className="text-pink-600 font-semibold">Movement</span> helping
+          brands grow through{" "}
+          <span className="text-pink-600 font-semibold">Data</span>,{" "}
+          <span className="text-pink-600 font-semibold">Content</span>, and{" "}
+          <span className="text-pink-600 font-semibold">Community</span>.
         </p>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Card 1 */}
-          <div className="group bg-[#111] p-8 rounded-2xl border border-gray-800 hover:border-pink-500 hover:shadow-[0_0_25px_-5px_rgba(236,72,153,0.5)] transition-all duration-300 ">
+          <div className="group bg-[#111]/70 p-8 rounded-2xl border border-pink-600/20 hover:border-pink-600 hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.6)] transition-all duration-500 backdrop-blur-xl">
             <div className="flex justify-center mb-6">
-              <Brain className="w-14 h-14 text-pink-400 group-hover:scale-110 transition-transform duration-300 " />
+              <Brain className="w-14 h-14 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-semibold mb-3 text-pink-600">
               Data Driven Creativity
             </h3>
             <p className="text-gray-400 text-base leading-relaxed">
-              Our Every Movement is Backed by Analysis and Insights that Fuel Creative Decisions.
+              Every idea is powered by insights and analytics that spark
+              meaningful creativity.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="group bg-[#111] p-8 rounded-2xl border border-gray-800 hover:border-pink-500 hover:shadow-[0_0_25px_-5px_rgba(236,72,153,0.5)] transition-all duration-300">
+          <div className="group bg-[#111]/70 p-8 rounded-2xl border border-pink-600/20 hover:border-pink-500 hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.6)] transition-all duration-500 backdrop-blur-xl">
             <div className="flex justify-center mb-6">
-              <Users className="w-14 h-14 text-pink-400 group-hover:scale-110 transition-transform duration-300" />
+              <Users className="w-14 h-14 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-semibold mb-3 text-pink-600">
               Family of Creators
             </h3>
             <p className="text-gray-400 text-base leading-relaxed">
-              We have India’s Biggest Theme Page and Personal Brand Creators Family fuelling our Clients.
+              India’s biggest creator and theme page community powering brand
+              stories across niches.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="group bg-[#111] p-8 rounded-2xl border border-gray-800 hover:border-pink-500 hover:shadow-[0_0_25px_-5px_rgba(236,72,153,0.5)] transition-all duration-300">
+          <div className="group bg-[#111]/70 p-8 rounded-2xl border border-pink-600/20 hover:border-pink-500 hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.6)] transition-all duration-500 backdrop-blur-xl">
             <div className="flex justify-center mb-6">
-              <Zap className="w-14 h-14 text-pink-400 group-hover:scale-110 transition-transform duration-300" />
+              <Zap className="w-14 h-14 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-semibold mb-3 text-pink-600">
               Speed with Perfection
             </h3>
             <p className="text-gray-400 text-base leading-relaxed">
-              In the Fast-Paced World of Digital Media, we ship Fast, Test Faster, and Optimize for Perfection.
+              We move fast, test faster, and perfect every launch with precision
+              and data.
             </p>
           </div>
         </div>

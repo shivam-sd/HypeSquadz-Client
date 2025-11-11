@@ -96,7 +96,7 @@ const Hero = () => {
               <Link to={"/work"} className="p-3 sm:p-4 rounded-lg border border-transparent hover:border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-[#ff007f] cursor-pointer hover:bg-transparent duration-300 text-white hover:text-gray-400">
                 See Our Work
               </Link>
-              <Link to={"/contact"} className="p-3 sm:p-4 rounded-lg border border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-white cursor-pointer hover:bg-[#ff007f] duration-300 text-orange-500 hover:text-white">
+              <Link to={"/contact"} className="p-3 sm:p-4 rounded-lg border border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-white cursor-pointer hover:bg-black duration-300 text-[#ff007f] hover:text-white">
                 Work With Us
               </Link>
             </motion.div>

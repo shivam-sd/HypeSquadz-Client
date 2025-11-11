@@ -102,7 +102,7 @@ const About = () => {
           Our Journey So Far
         </h2>
         <div className="max-w-4xl mx-auto relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#ff007f] to-[#00f5ff]"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#ff007f] to-orange-500"></div>
           {milestones.map((m, i) => (
             <motion.div
               key={i}
@@ -126,7 +126,7 @@ const About = () => {
       {/* Team */}
       <div className="py-20 px-6 bg-[#111]/70">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12">
-          Meet Our Founders
+          Meet Our <span className="text-pink-600">FOUNDERS</span>
         </h2>
         <div className="grid gap-10 sm:grid-cols-2 max-w-6xl mx-auto cursor-pointer">
           {team.map((t, i) => (

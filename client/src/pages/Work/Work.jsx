@@ -74,7 +74,7 @@ const Work = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               {work.tags?.[0] && (
-                <div className="absolute bottom-4 left-4 bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white text-xs px-3 py-1 rounded-full shadow-md">
+                <div className="absolute bottom-4 left-4 bg-[#ff007f] text-white text-xs px-3 py-1 rounded-full shadow-md font-bold">
                   {work.tags[0]}
                 </div>
               )}

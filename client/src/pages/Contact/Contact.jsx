@@ -62,7 +62,7 @@ const Contact = () => {
         className="relative z-10 text-center mb-12"
       >
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">
-          Let’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007f] to-[#00f5ff]">Connect</span>
+          Let’s <span className="text-transparent bg-clip-text bg-[#ff007f]">Connect</span>
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
           Got a campaign idea or want to scale your brand? Drop us a message and let’s make it happen.
@@ -92,7 +92,7 @@ const Contact = () => {
 
           {/* Email */}
           <div className="flex items-center gap-3 border-b border-white/10 pb-3 focus-within:border-[#00f5ff] transition-all">
-            <FaEnvelope className="text-[#00f5ff]" />
+            <FaEnvelope className="text-[#ff007f]" />
             <input
               type="email"
               placeholder="Your Email"
@@ -130,7 +130,7 @@ const Contact = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
             type="submit"
-            className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white font-semibold py-4 rounded-full shadow-lg hover:shadow-[0_0_30px_-5px_rgba(255,0,127,0.6)] transition-all duration-300 cursor-pointer"
+            className="flex items-center justify-center gap-2 bg-[#ff007f] text-white font-semibold py-4 rounded-full shadow-lg hover:shadow-[0_0_30px_-5px_rgba(255,0,127,0.6)] transition-all duration-300 cursor-pointer"
           >
             <FaPaperPlane className="text-lg"/>
             Send Message
