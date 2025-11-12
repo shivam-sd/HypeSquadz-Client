@@ -20,7 +20,7 @@ const CTASection = () => {
         {/* Heading */}
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
           Got a{" "}
-          <span className="text-transparent bg-clip-text bg-[#ff007f]">
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
             Brand
           </span>{" "}
           to Grow?
@@ -42,7 +42,7 @@ const CTASection = () => {
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="bg-[#ff007f] text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer"
+            className="bg-gradient-to-r from-[#ff007f] to-orange-500 text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer"
           >
             Contact Us
           </motion.button>

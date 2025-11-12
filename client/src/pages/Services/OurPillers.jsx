@@ -12,7 +12,7 @@ const OurPillars = () => {
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
           Our{" "}
-          <span className="text-pink-500">
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
             Pillars
           </span>
         </h2>
@@ -20,11 +20,11 @@ const OurPillars = () => {
         {/* Subtext */}
         <p className="text-gray-300 max-w-3xl mx-auto mb-16 text-lg md:text-xl">
           We’re not an Agency. We’re a{" "}
-          <span className="text-pink-600 font-semibold">Movement</span> helping
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent font-semibold">Movement</span> helping
           brands grow through{" "}
-          <span className="text-pink-600 font-semibold">Data</span>,{" "}
-          <span className="text-pink-600 font-semibold">Content</span>, and{" "}
-          <span className="text-pink-600 font-semibold">Community</span>.
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent font-semibold">Data</span>,{" "}
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent font-semibold">Content</span>, and{" "}
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent font-semibold">Community</span>.
         </p>
 
         {/* Cards Section */}
@@ -34,7 +34,7 @@ const OurPillars = () => {
             <div className="flex justify-center mb-6">
               <Brain className="w-14 h-14 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-pink-600">
+            <h3 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
               Data Driven Creativity
             </h3>
             <p className="text-gray-400 text-base leading-relaxed">
@@ -48,7 +48,7 @@ const OurPillars = () => {
             <div className="flex justify-center mb-6">
               <Users className="w-14 h-14 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-pink-600">
+            <h3 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
               Family of Creators
             </h3>
             <p className="text-gray-400 text-base leading-relaxed">
@@ -62,7 +62,7 @@ const OurPillars = () => {
             <div className="flex justify-center mb-6">
               <Zap className="w-14 h-14 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-pink-600">
+            <h3 className="text-2xl font-semibold mb-3 bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
               Speed with Perfection
             </h3>
             <p className="text-gray-400 text-base leading-relaxed">

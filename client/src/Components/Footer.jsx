@@ -25,7 +25,7 @@ const Footer = () => {
         className="relative z-10 flex flex-col items-center justify-center text-center px-6"
       >
         {/* Logo / Name */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-pink-600 mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent mb-4">
           HypeSquadz
         </h2>
 
@@ -57,7 +57,7 @@ const Footer = () => {
         {/* Copyright */}
         <p className="text-gray-500 text-xs">
           © {new Date().getFullYear()}{" "}
-          <span className="text-white font-medium">HypeSquadz</span>. All rights reserved.
+          <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent font-medium">HypeSquadz</span>. All rights reserved.
         </p>
       </motion.div>
 

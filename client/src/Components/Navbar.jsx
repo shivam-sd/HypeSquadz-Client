@@ -53,7 +53,7 @@ const Navbar = () => {
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className=" bg-[#ff007f] text-white font-semibold px-6 py-1 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer">
+            className="bg-gradient-to-r from-[#ff007f] to-orange-500 text-white font-semibold px-6 py-1 rounded-full text-lg shadow-lg hover:shadow-[0_0_25px_-5px_rgba(255,0,127,0.5)] transition-all duration-300 cursor-pointer">
             Contact
             </motion.button></Link>
 
@@ -90,7 +90,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-                  <Link to={'/contact'} className="text-lg text-white bg-orange-500 cursor-pointer p-1 rounded-lg flex items-center justify-center font-bold hover:scale-105 duration-300">Contact</Link>
+                  <Link to={'/contact'} className="text-lg text-white bg-gradient-to-r from-[#ff007f] to-orange-500 cursor-pointer p-1 rounded-lg flex items-center justify-center font-bold hover:scale-105 duration-300">Contact</Link>
 
           {/* <button className="w-full bg-gradient-to-r from-[#ff007f] to-[#00f5ff] text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
             Join Us

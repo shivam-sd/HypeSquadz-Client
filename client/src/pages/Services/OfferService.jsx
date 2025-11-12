@@ -61,7 +61,7 @@ const OfferService = () => {
             transition={{ delay: 0.3 + idx * 0.15, duration: 0.6 }}
             className="bg-[#111]/70 border border-white/10 rounded-2xl p-8 backdrop-blur-xl hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
           >
-            <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-6 bg-[#ff007f] shadow-lg`}>
+            <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-6 bg-gradient-to-r from-[#ff007f] to-orange-500 shadow-lg`}>
               {svc.icon}
             </div>
             <h3 className="text-xl font-semibold mb-3 ">{svc.title}</h3>

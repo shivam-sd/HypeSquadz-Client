@@ -48,7 +48,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl sm:text-5xl font-extrabold mb-4"
         >
-          The Squad Behind Your <span className="text-pink-500">Hype</span>
+          The Squad Behind Your <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">Hype</span>
         </motion.h2>
 
         <motion.p
@@ -72,7 +72,7 @@ End-to-End Content, Branding, and PR System for Founders, Creators, and Educatio
               className="bg-[#111]/70 border border-yellow-200/40 rounded-2xl p-8 backdrop-blur-xl hover:-translate-y-2 hover:border-[#ff007f]/40 transition-all duration-300 cursor-pointer text-left"
             >
               <div
-                className={`w-14 h-14 rounded-xl bg-[#ff007f] flex items-center justify-center mb-6 shadow-lg`}
+                className={`w-14 h-14 rounded-xl bg-gradient-to-r from-[#ff007f] to-orange-500 flex items-center justify-center mb-6 shadow-lg`}
               >
                 {item.icon}
               </div>

@@ -26,8 +26,8 @@ const Hero = () => {
           >
             The Squad Behind
             <br />
-            <span className="text-pink-600">Breakthrough </span>
-            <span className="text-pink-600">Brand</span>
+            <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">Breakthrough </span>
+            <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">Brand</span>
           </motion.h1>
 
           {/* Subtext */}
@@ -57,7 +57,7 @@ const Hero = () => {
             className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
           >
             {/* Static Button */}
-            <button className="flex items-center gap-3 bg-[#ff007f] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <button className="flex items-center gap-3 bg-gradient-to-r from-[#ff007f] to-orange-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
               Idea
             </button>
 
@@ -71,7 +71,7 @@ const Hero = () => {
                 id="role"
                 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400 p-2 rounded-lg"
               >
-                <div className="text-wrapper">
+                <div className="text-wrapper bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
                   <div>Strategies</div>
                   <div>Campaigns</div>
                   <div>Influence</div>
@@ -93,10 +93,10 @@ const Hero = () => {
               transition={{ delay: 1, duration: 1 }}
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
-              <Link to={"/work"} className="p-3 sm:p-4 rounded-lg border border-transparent hover:border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-[#ff007f] cursor-pointer hover:bg-transparent duration-300 text-white hover:text-gray-400">
+              <Link to={"/work"} className="p-3 sm:p-4 rounded-lg border border-transparent hover:border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-gradient-to-r from-[#ff007f] to-orange-500 cursor-pointer hover:bg-transparent duration-300 text-white hover:text-gray-400">
                 See Our Work
               </Link>
-              <Link to={"/contact"} className="p-3 sm:p-4 rounded-lg border border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-white cursor-pointer hover:bg-black duration-300 text-[#ff007f] hover:text-white">
+              <Link to={"/contact"} className="p-3 sm:p-4 rounded-lg border border-blue-500/35 text-base sm:text-lg font-bold w-full sm:w-48 bg-white cursor-pointer hover:bg-black duration-300 bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent hover:text-white">
                 Work With Us
               </Link>
             </motion.div>

@@ -26,7 +26,7 @@ const TrustedBy = () => {
         className="relative z-10 max-w-3xl mx-auto mb-12"
       >
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-          Trusted By The <span className="text-transparent bg-clip-text bg-[#ff007f]">Best</span>
+          Trusted By The <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">Best</span>
         </h2>
         <p className="text-gray-400 text-lg sm:text-xl">
           Partnered with India’s Fastest-Growing Education and Creator Brands.

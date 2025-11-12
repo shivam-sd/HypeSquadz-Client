@@ -58,7 +58,7 @@ const NumbersSection = () => {
         transition={{ duration: 0.8 }}
         className="max-w-4xl mx-auto mb-12"
       >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4"><span className="text-transparent bg-clip-text bg-[#ff007f]">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4"><span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
           Numbers</span>&nbsp;That Speak</h2>
         <p className="text-gray-400 text-sm sm:text-xl">We don’t just promise results we deliver them at scale.</p>
       </motion.div>
@@ -72,7 +72,7 @@ const NumbersSection = () => {
             transition={{ delay: stat.id * 0.2, duration: 0.8 }}
             className="bg-[#111]/60 border border-white/10 rounded-2xl p-8 backdrop-blur-xl hover:shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
           >
-            <div className="text-4xl sm:text-5xl md:text-6xl mb-2 text-[#ff007f]">
+            <div className="text-4xl sm:text-5xl md:text-6xl mb-2 bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
               {hasAnimated ? stat.number : "0+"}
             </div>
             <div className="text-gray-300 text-lg">{stat.label}</div>

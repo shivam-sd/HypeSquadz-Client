@@ -36,7 +36,7 @@ const About = () => {
           className="relative z-10 text-center px-6"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            About <span className="text-[#ff007f]">HypeSquadz</span>
+            About <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">HypeSquadz</span>
           </h1>
           <p className="text-gray-300 mt-4 text-lg">
             Consistent Colour throughout the website for HypeSquadz
@@ -63,7 +63,7 @@ const About = () => {
                 whileHover={{ scale: 1.1 }}
                 className="transition-transform duration-300"
               >
-                <h3 className="text-3xl font-bold text-[#ff007f]">{stat.value}</h3>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">{stat.value}</h3>
                 <p className="text-gray-400">{stat.label}</p>
               </motion.div>
             ))}
@@ -115,7 +115,7 @@ const About = () => {
             >
               <div className="bg-[#111] p-6 rounded-2xl shadow-md border border-white/10 w-1/2 hover:shadow-[0_0_25px_#ff007f80] transition-all duration-300">
                 {/* <div className="flex items-center justify-center">{m.icon}</div> */}
-                <h3 className="text-[#ff007f] text-xl font-bold">{m.year}</h3>
+                <h3 className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent text-xl font-bold">{m.year}</h3>
                 <p className="text-gray-300">{m.label}</p>
               </div>
             </motion.div>
@@ -126,7 +126,7 @@ const About = () => {
       {/* Team */}
       <div className="py-20 px-6 bg-[#111]/70">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12">
-          Meet Our <span className="text-pink-600">FOUNDERS</span>
+          Meet Our <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">FOUNDERS</span>
         </h2>
         <div className="grid gap-10 sm:grid-cols-2 max-w-6xl mx-auto cursor-pointer">
           {team.map((t, i) => (
@@ -143,7 +143,7 @@ const About = () => {
                 alt={t.name}
                 className="w-32 h-32 mx-auto rounded-full object-cover mb-4 ring-4 ring-[#ff007f]/40"
               />
-              <h3 className="text-xl font-semibold text-[#ff007f]">{t.name}</h3>
+              <h3 className="text-xl font-semibold bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">{t.name}</h3>
               <p className="text-gray-400 mt-2">{t.desc}</p>
             </motion.div>
           ))}
