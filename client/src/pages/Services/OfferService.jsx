@@ -41,7 +41,7 @@ const OfferService = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl font-extrabold"
         >
-          Our Services
+          Our <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">Services</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
