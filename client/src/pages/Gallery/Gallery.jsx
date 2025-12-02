@@ -3,6 +3,16 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+import { Helmet } from "react-helmet";
+
+<Helmet>
+  <title>HypeSquadz – Web Development & Branding Agency</title>
+  <meta name="description" content="HypeSquadz offers web design, app development, branding and SEO services to build your brand." />
+  <meta property="og:title" content="HypeSquadz – Creative Digital Agency" />
+  <meta property="og:description" content="We build brands with next-gen websites, apps, and marketing." />
+</Helmet>
+
+
 const Gallery = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // ✅ start with true
