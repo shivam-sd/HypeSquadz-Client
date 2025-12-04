@@ -16,13 +16,19 @@ const Hero = () => {
           name="description"
           content="HypeSquadz offers web design, app development, branding and SEO services to build your brand."
         />
-        <meta property="og:title" content="HypeSquadz – Creative Digital Agency" />
+        <meta
+          property="og:title"
+          content="HypeSquadz – Creative Digital Agency"
+        />
         <meta
           property="og:description"
           content="We build brands with next-gen websites, apps, and marketing."
         />
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="HypeSquadz, digital agency, branding, marketing, SEO, web development" />
+        <meta
+          name="keywords"
+          content="HypeSquadz, digital agency, branding, marketing, SEO, web development"
+        />
       </Helmet>
 
       <Navbar />
@@ -52,7 +58,7 @@ const Hero = () => {
             The Squad Behind
             <br />
             <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
-              Breakthrough 
+              Breakthrough
             </span>{" "}
             <span className="bg-gradient-to-r from-[#ff007f] to-orange-500 bg-clip-text text-transparent">
               Brand
@@ -66,7 +72,11 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-gray-300 mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
           >
-            <span className="md:inline text-white font-semibold">
+            <span className="text-base sm:text-lg">
+              Content, Branding & PR Services That Grow Founders, Creators &
+              Educational Brands.
+            </span>
+            {/* <span className="md:inline text-white font-semibold">
               You create the Vision.
             </span>{" "}
             - We build the Growth Engine for you.
@@ -74,7 +84,7 @@ const Hero = () => {
             <span className="text-base sm:text-lg">
               End-to-End Content, Branding, and PR System for Founders, Creators,
               and Educational Brands.
-            </span>
+            </span> */}
           </motion.p>
 
           {/* Animated Button Row */}
